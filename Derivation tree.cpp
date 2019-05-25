@@ -3,19 +3,29 @@
 
 #include "pch.h"
 #include <iostream>
-
+#include "DT_T.h"
+#include "list"
+using namespace std;
 int main()
 {
+	/*Element_T el = "start";
+	Element_T el1 = "test1";
+	Element_T el2 = "test2";
+	Element_T el3 = "test3";
+	DT_T test1 = Make_Tree(el1);
+	DT_T test2 = Make_Tree(el2);
+	DT_T test3 = Make_Tree(el3);
+
+	DT_T res = Make_Tree(el, &list<DT_T>{test1, test2, test3});
+	Free_Tree(res);*/
+	Element_T el = "start";
+	DT_T root = Make_Tree(el);
+	Add_Child(root, "test1");
+	Add_Child(root, "test2");
+	Add_Child(root, "test3");
+	Free_Tree(root);
+
     std::cout << "Hello World!\n"; 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

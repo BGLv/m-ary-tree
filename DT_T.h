@@ -30,4 +30,15 @@ DT_T Get_Next(DT_T Tree);
 
 //PRE true
 //POST RETURN tree with root element value an subtrees childs
-DT_T Make_Tree(Element_T value, std::list<DT_T> childs);
+DT_T Make_Tree(Element_T value, std::list<DT_T> *childs);
+DT_T Make_Tree(Element_T Element);
+
+
+//PRE not Q_Empty(Tree)
+//POST Tree with new child element
+void Add_Child(DT_T Tree, Element_T element);
+
+//POST True
+//POST freed memory allocated for Tree
+//NOTE: for next use of Tree we must reinitialize it by Make_Tree()
+void Free_Tree(DT_T Tree);
